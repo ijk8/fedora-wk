@@ -1,17 +1,18 @@
 default:
 	@echo no
-bootstrap: .force
-	@dnf install -y livecd-tools spin-kickstarts createrepo fedora-packager
-	@mkdir /var/rpm
-	@curl https://az764295.vo.msecnd.net/stable/fa6d0f03813dfb9df4589c30121e9fcffa8a8ec8/vscode-x86_64.rpm > /var/rpm/code.rpm
-	@createrepo /var/rpm
+download:
+	@mkdir -p rpmbuild/SOURCES
+	@curl https://www.fossil-scm.org/index.html/tarball/fossil-src.tar.gz > rpmbuild/SOURCES/fossil-src.tar.gz
 rpm: .force
 	@rpmbuild --define "_topdir $(shell pwd)/rpmbuild" -bb rpmbuild/SPECS/fossil-scm.spec
 install: .force
+	@dnf install -y livecd-tools spin-kickstarts createrepo fedora-packager
+	@rm -rf /var/rpm
+	@mkdir /var/rpm
+	@curl https://az764295.vo.msecnd.net/stable/fa6d0f03813dfb9df4589c30121e9fcffa8a8ec8/vscode-x86_64.rpm > /var/rpm/code.rpm
+	@curl http://download.skype.com/linux/skype-4.3.0.37-fedora.i586.rpm > /var/rpm/skype.rpm
 	@cp rpmbuild/RPMS/x86_64/*.rpm /var/rpm/
 	@createrepo /var/rpm
-download:
-	@curl https://www.fossil-scm.org/index.html/tarball/fossil-src.tar.gz > rpmbuild/SOURCES/fossil-src.tar.gz
 clean:
 	@rm -rf rpmbuild/RPMS
 	@rm -rf rpmbuild/SRPMS

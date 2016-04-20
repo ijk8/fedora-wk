@@ -20,7 +20,7 @@ haskell-platform
 httpd
 java-1.8.0-openjdk-devel
 livecd-tools
-lmdb
+lmdb-devel
 mlocate
 mysql
 mysql-server
@@ -40,6 +40,7 @@ ruby-devel
 rubygem-pg
 rubygem-rails
 sbcl
+skype
 spin-kickstarts
 sqlite-devel
 squeak-vm
