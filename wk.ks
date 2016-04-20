@@ -6,6 +6,7 @@ repo --name=extra --baseurl=file:///var/rpm
 
 %packages
 ansible
+clang
 clojure
 code
 createrepo
