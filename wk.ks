@@ -57,5 +57,7 @@ systemctl enable postgresql
 systemctl enable mysqld
 updatedb
 #systemctl enable docker
+#systemctl enable httpd
+#systemctl enable nginx
 #sudo su - postgres -c "createuser --superuser ab"
 %end
