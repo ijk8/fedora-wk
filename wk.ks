@@ -10,9 +10,11 @@ code
 createrepo
 docker-engine
 emacs
+fossil-scm
 google-chrome-stable
 livecd-tools
 mlocate
+mock
 npm
 pgadmin3
 postgresql-contrib
@@ -23,6 +25,9 @@ rubygem-pg
 rubygem-rails
 spin-kickstarts
 sqlite-devel
+terminator
+tmux
+valgrind
 vagrant
 %end
 
