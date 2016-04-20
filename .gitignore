@@ -1,0 +1,6 @@
+*.iso
+rpmbuild/BUILD/*
+rpmbuild/BUILDROOT/*
+rpmbuild/RPMS/*
+rpmbuild/SRPMS/*
+rpmbuild/SOURCES/*
