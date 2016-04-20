@@ -26,6 +26,7 @@ mysql
 mysql-server
 nginx
 npm
+perf
 pgadmin3
 php
 php-mysql
