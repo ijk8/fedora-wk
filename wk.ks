@@ -25,7 +25,8 @@ httpd
 java-1.8.0-openjdk-devel
 livecd-tools
 lmdb-devel
-lttng-tools
+lttng-tools-devel
+lttng-ust-devel
 masscan
 mlocate
 mysql
