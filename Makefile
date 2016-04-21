@@ -1,12 +1,13 @@
 default:
 	@echo no
+bootstrap:
+	@dnf install -y livecd-tools spin-kickstarts createrepo fedora-packager
 download:
 	@mkdir -p rpmbuild/SOURCES
 	@curl https://www.fossil-scm.org/index.html/tarball/fossil-src.tar.gz > rpmbuild/SOURCES/fossil-src.tar.gz
 rpm: .force
 	@rpmbuild --define "_topdir $(shell pwd)/rpmbuild" -bb rpmbuild/SPECS/fossil-scm.spec
 install: .force
-	@dnf install -y livecd-tools spin-kickstarts createrepo fedora-packager
 	@rm -rf /var/rpm
 	@mkdir /var/rpm
 	@curl https://az764295.vo.msecnd.net/stable/fa6d0f03813dfb9df4589c30121e9fcffa8a8ec8/vscode-x86_64.rpm > /var/rpm/code.rpm
