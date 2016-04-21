@@ -1,5 +1,5 @@
 %include /usr/share/spin-kickstarts/fedora-live-workstation.ks
-part / --size 8192
+part / --size 16384
 repo --name=chrome --baseurl=https://dl.google.com/linux/chrome/rpm/stable/x86_64/
 repo --name=docker --baseurl=https://yum.dockerproject.org/repo/main/fedora/23/
 repo --name=virtualbox --baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/22/x86_64/
