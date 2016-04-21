@@ -10,6 +10,7 @@ clang
 clojure
 code
 createrepo
+dmd
 docker-engine
 erlang
 fedora-packager
