@@ -7,6 +7,9 @@ repo --name=extra --baseurl=file:///var/rpm
 
 %packages
 ansible
+autoconf
+automake
+bison
 clang
 clojure
 code
@@ -24,6 +27,8 @@ haskell-platform
 htop
 httpd
 java-1.8.0-openjdk-devel
+libtool
+libyaml-devel
 livecd-tools
 lmdb-devel
 masscan
@@ -42,6 +47,7 @@ pl
 postgresql-contrib
 postgresql-devel
 postgresql-server
+readline-devel
 redis
 ruby-devel
 rubygem-pg
