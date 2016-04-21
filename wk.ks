@@ -17,6 +17,7 @@ erlang
 fedora-packager
 fossil-scm
 gforth
+glibc-static
 google-chrome-stable
 haproxy
 haskell-platform
