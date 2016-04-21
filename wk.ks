@@ -19,6 +19,7 @@ gforth
 google-chrome-stable
 haproxy
 haskell-platform
+htop
 httpd
 java-1.8.0-openjdk-devel
 livecd-tools
