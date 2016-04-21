@@ -55,6 +55,7 @@ tmux
 vagrant
 valgrind
 VirtualBox-5.0
+wireshark-gnome
 %end
 
 %post
