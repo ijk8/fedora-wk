@@ -51,8 +51,8 @@ skype
 spin-kickstarts
 sqlite-devel
 squeak-image
+tex
 texlive-cweb-bin
-texlive-tex-bin
 texlive-web-bin
 tmux
 vagrant
