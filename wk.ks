@@ -54,7 +54,7 @@ squeak-image
 tmux
 vagrant
 valgrind
-virtualbox
+VirtualBox-5.0
 %end
 
 %post
