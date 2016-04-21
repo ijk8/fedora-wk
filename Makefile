@@ -1,5 +1,9 @@
 default:
-	@echo no
+	@echo sudo make bootstrap
+	@echo make download
+	@echo make rpm
+	@echo sudo make install
+	@echo sudo make wk
 bootstrap:
 	@dnf install -y livecd-tools spin-kickstarts createrepo fedora-packager
 download:
