@@ -45,6 +45,7 @@ ruby-devel
 rubygem-pg
 rubygem-rails
 sbcl
+scala
 skype
 spin-kickstarts
 sqlite-devel
