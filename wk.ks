@@ -48,7 +48,7 @@ sbcl
 skype
 spin-kickstarts
 sqlite-devel
-squeak-vm
+squeak-image
 tmux
 vagrant
 valgrind
