@@ -16,7 +16,7 @@ install: .force
 	@mkdir /var/rpm
 	@curl https://az764295.vo.msecnd.net/stable/fa6d0f03813dfb9df4589c30121e9fcffa8a8ec8/vscode-x86_64.rpm > /var/rpm/code.rpm
 	@curl http://download.skype.com/linux/skype-4.3.0.37-fedora.i586.rpm > /var/rpm/skype.rpm
-	@curl http://downloads.dlang.org/releases/2.x/2.071.0/dmd-2.071.0-0.fedora.x86_64.rpm > /var/rpm/dmd.rpm
+	@curl http://downloads.dlang.org/releases/2016/dmd-2.071.0-0.fedora.x86_64.rpm > /var/rpm/dmd.rpm
 	@cp rpmbuild/RPMS/x86_64/*.rpm /var/rpm/
 	@createrepo /var/rpm
 clean:
