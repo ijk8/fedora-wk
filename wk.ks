@@ -7,6 +7,7 @@ repo --name=extra --baseurl=file:///var/rpm
 
 %packages
 ansible
+atom
 autoconf
 automake
 bison
@@ -19,6 +20,7 @@ docker-engine
 erlang
 fedora-packager
 fossil-scm
+geany
 gforth
 glibc-static
 google-chrome-stable
@@ -27,6 +29,7 @@ haskell-platform
 htop
 httpd
 java-1.8.0-openjdk-devel
+keepass
 libtool
 libyaml-devel
 livecd-tools
@@ -58,7 +61,8 @@ skype
 spin-kickstarts
 sqlite-devel
 squeak-image
-tex
+terminator
+texlive
 texlive-cweb-bin
 texlive-web-bin
 tmux
