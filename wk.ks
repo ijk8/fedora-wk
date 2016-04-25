@@ -73,23 +73,27 @@ wireshark-gnome
 %end
 
 %post
-systemctl enable postgresql
 systemctl enable mariadb
+#systemctl enable httpd
+#systemctl enable nginx
 
-cat > /usr/bin/begin << EOF
+cat > /usr/bin/begin << "EOF"
 #!/bin/bash
 export ME=$(whoami)
-sudo -H npm install -g ungit
 sudo usermod -aG vboxusers $ME
 sudo usermod -aG docker $ME
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo su - postgres -c /usr/bin/initdb
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
 sudo su - postgres -c "createuser --superuser $ME"
-#systemctl enable httpd
-#systemctl enable nginx
+#ungit install hangs live media
+if [ $ME != "liveuser" ]; then sudo -H npm install -g ungit; fi
+exec su -l $ME #reload group membership without logging out
 #reboot
 EOF
 
+chmod a+x /usr/bin/begin
 updatedb
 %end
