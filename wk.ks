@@ -73,12 +73,23 @@ wireshark-gnome
 %end
 
 %post
-su - postgres -c /usr/bin/initdb
 systemctl enable postgresql
 systemctl enable mariadb
-updatedb
-#systemctl enable docker
+
+cat > /usr/bin/begin << EOF
+#!/bin/bash
+export ME=$(whoami)
+sudo -H npm install -g ungit
+sudo usermod -aG vboxusers $ME
+sudo usermod -aG docker $ME
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo su - postgres -c /usr/bin/initdb
+sudo su - postgres -c "createuser --superuser $ME"
 #systemctl enable httpd
 #systemctl enable nginx
-#sudo su - postgres -c "createuser --superuser ab"
+#reboot
+EOF
+
+updatedb
 %end
