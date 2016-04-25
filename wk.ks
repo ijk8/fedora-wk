@@ -112,7 +112,7 @@ if [ $ME != "liveuser" ]; then sudo -H npm install -g ungit; fi
 exec su -l $ME #reload group membership without logging out
 #reboot
 EOF
-
 chmod a+x /usr/bin/begin
+
 updatedb
 %end
