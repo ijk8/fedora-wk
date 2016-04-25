@@ -36,8 +36,8 @@ livecd-tools
 lmdb-devel
 masscan
 mlocate
-mysql
-mysql-server
+mariadb
+mariadb-server
 nginx
 npm
 ocaml
@@ -75,7 +75,7 @@ wireshark-gnome
 %post
 su - postgres -c /usr/bin/initdb
 systemctl enable postgresql
-systemctl enable mysqld
+systemctl enable mariadb
 updatedb
 #systemctl enable docker
 #systemctl enable httpd
