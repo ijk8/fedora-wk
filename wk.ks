@@ -44,6 +44,7 @@ ocaml
 perf
 pgadmin3
 php
+phpmyadmin
 php-mysql
 php-pgsql
 pl
