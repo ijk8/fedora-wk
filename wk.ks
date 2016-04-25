@@ -76,6 +76,24 @@ wireshark-gnome
 systemctl enable mariadb
 #systemctl enable httpd
 #systemctl enable nginx
+#chrome policies
+sudo mkdir -p /etc/opt/chrome/policies/{managed,recommended}
+sudo cat > /etc/opt/chrome/policies/recommended/default.json << EOF
+{
+  "SpellCheckServiceEnabled": false,
+  "BackgroundModeEnabled": false,
+  "RestoreOnStartup": 1,
+  "TranslateEnabled": false,
+  "DnsPrefetchingEnabled": false,
+  "SafeBrowsingEnabled": false
+}
+EOF
+sudo cat > /etc/opt/chrome/policies/managed/force.json << EOF
+{
+  "DefaultBrowserSettingEnabled": true,
+  "MetricsReportingEnabled": false
+}
+EOF
 
 cat > /usr/bin/begin << "EOF"
 #!/bin/bash
