@@ -51,6 +51,7 @@ pl
 postgresql-contrib
 postgresql-devel
 postgresql-server
+python-webpy
 readline-devel
 redis
 ruby-devel
@@ -69,6 +70,7 @@ texlive-web-bin
 tmux
 vagrant
 valgrind
+virt-manager
 VirtualBox-5.0
 wireshark-gnome
 %end
