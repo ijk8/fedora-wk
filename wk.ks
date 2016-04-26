@@ -107,8 +107,8 @@ sudo usermod -aG docker $ME
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo su - postgres -c /usr/bin/initdb
-sudo systemctl start postgresql
 sudo systemctl enable postgresql
+sudo systemctl start postgresql
 sudo su - postgres -c "createuser --superuser $ME"
 #ungit install hangs live media
 if [ $ME != "liveuser" ]; then sudo -H npm install -g ungit; fi
