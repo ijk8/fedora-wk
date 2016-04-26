@@ -101,6 +101,7 @@ EOF
 cat > /usr/bin/begin << "EOF"
 #!/bin/bash
 export ME=$(whoami)
+sudo usermod -aG wireshark $ME
 sudo usermod -aG vboxusers $ME
 sudo usermod -aG docker $ME
 sudo systemctl enable docker
