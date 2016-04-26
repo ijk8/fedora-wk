@@ -112,8 +112,13 @@ sudo systemctl enable postgresql
 sudo su - postgres -c "createuser --superuser $ME"
 #ungit install hangs live media
 if [ $ME != "liveuser" ]; then sudo -H npm install -g ungit; fi
+pushd .; cd /usr/local; curl https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz | sudo tar xz; popd
+mkdir -p ~/go/{bin,src}
+echo 'export GOPATH=$HOME/go' >> ~/.bash_profile
+echo 'export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH' >> ~/.bash_profile
+source ~/.bash_profile
 exec su -l $ME #reload group membership without logging out
-#reboot
+sudo updatedb
 EOF
 chmod a+x /usr/bin/begin
 
